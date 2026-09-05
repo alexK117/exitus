@@ -1,0 +1,82 @@
+html {
+  scroll-behavior: smooth;
+  background-color: #080808;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --accent-color: #22c55e;
+  --accent-hover: #16a34a;
+  --bg-dark: #0a0a0a;
+  --bg-card: #141414;
+  --text-muted: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* --- ОТСТУП ПОД ФИКСИРОВАННЫЙ ХЕДЕР (Чтобы контент не заезжал) --- */
+/* Отступ нужен ТОЛЬКО для обычных страниц, но НЕ для главной */
+main,
+.services-page,
+.contacts-page {
+  padding-top: 49px;
+}
+
+@media (max-width: 768px) {
+  main,
+  .services-page,
+  .contacts-page {
+    padding-top: 39px;
+  }
+}
+
+/* --- АНИМАЦИЯ ХЕРО-ФОНА --- */
+@keyframes heroZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.12);
+  }
+}
+
+.hero-section {
+  overflow: hidden;
+}
+
+.hero-bg-img {
+  animation: heroZoom 12s ease-out forwards;
+  will-change: transform;
+}
+
+/* --- АНИМАЦИИ ПОСЛЕ СКРОЛЛА (Scroll Reveal) --- */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(35px) scale(0.97);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-init.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Задержки (Stagger effect) */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.22s; }
+.delay-3 { transition-delay: 0.34s; }
+.delay-4 { transition-delay: 0.46s; }

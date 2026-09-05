@@ -1,0 +1,98 @@
+.contacts-page {
+  padding: 40px 20px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contacts-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contacts-header h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.contacts-header p {
+  color: var(--text-muted);
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.contacts-info-card,
+.quick-call-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item span {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.info-item p {
+  color: #ddd;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.phone-link {
+  font-size: 22px;
+  font-weight: 900;
+  color: #fff;
+  text-decoration: none;
+}
+
+.card-tag {
+  color: var(--accent-color);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.quick-call-card h2 {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.quick-call-card p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.btn-call {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: var(--accent-color);
+  color: #000;
+  font-weight: 900;
+  font-size: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: auto;
+  box-sizing: border-box;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn-call:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
