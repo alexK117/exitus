@@ -5,21 +5,20 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
-import { companyData } from './data/companyData';
 import './css/global.css';
 
 const App: React.FC = () => {
   return (
     <div className="app-layout">
-      <Header phone={companyData.phone} />
+      <Header />
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<HomePage company={companyData} />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/pakalpojumi" element={<ServicesPage />} />
-          <Route path="/kontakti" element={<ContactPage phone={companyData.phone} />} />
+          <Route path="/kontakti" element={<ContactPage />} />
         </Routes>
       </main>
-      <Footer company={companyData} />
+      <Footer />
     </div>
   );
 };
